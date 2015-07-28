@@ -1,6 +1,8 @@
 Changelog
 =========
 
+Audrius is owner now!!!
+
 2.0.1
 ------
 
