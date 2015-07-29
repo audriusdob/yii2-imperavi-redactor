@@ -311,6 +311,9 @@ body .redactor-box-fullscreen {
 .re-fontsize:before {
   content: "\e613";
 }
+.re-pdf:before {
+  content: "\e61a";
+}
 .re-fontfamily:before {
   content: "\e614";
 }
@@ -939,4 +942,18 @@ body .redactor-box-fullscreen {
 .redactor-editor h6 {
   font-size: 12px;
   text-transform: uppercase;
+}
+
+#redactor_figures_box {
+  height: 400px;
+  overflow-y: scroll;
+  overflow-x: visible;
+
+}
+
+.redactor-figure-list-item {
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
