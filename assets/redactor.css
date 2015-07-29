@@ -957,3 +957,9 @@ body .redactor-box-fullscreen {
   padding-top: 5px;
   padding-bottom: 5px;
 }
+
+.button-row {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-align: center;
+}
