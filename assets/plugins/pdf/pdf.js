@@ -21,7 +21,7 @@ if (!RedactorPlugins) var RedactorPlugins = {};
                 this.button.addCallback(button, this.pdf.show);
 
                 // make your added button as Font Awesome's icon
-                this.button.setAwesome('advanced', 'fa-tasks');
+                this.button.setAwesome('advanced', 'fa-bar-chart');
 
                 //console.log(this.opts.figuresList);
 
