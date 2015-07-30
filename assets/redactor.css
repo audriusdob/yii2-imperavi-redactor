@@ -954,12 +954,12 @@ body .redactor-box-fullscreen {
 .redactor-figure-list-item {
   margin-left: 0px;
   margin-right: 0px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .button-row {
-  padding-top: 2px;
-  padding-bottom: 2px;
+  padding-top: 10px;
+  padding-bottom: 5px;
   text-align: center;
 }
