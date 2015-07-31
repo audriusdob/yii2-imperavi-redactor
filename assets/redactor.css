@@ -951,6 +951,12 @@ body .redactor-box-fullscreen {
 
 }
 
+#redactor_references_box {
+  height: 400px;
+  overflow-y: scroll;
+  overflow-x: visible;
+}
+
 .redactor-figure-list-item {
   margin-left: 0px;
   margin-right: 0px;
