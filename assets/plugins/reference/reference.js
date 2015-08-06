@@ -32,7 +32,7 @@ if (!RedactorPlugins) var RedactorPlugins = {};
             {
                 this.modal.addTemplate('advanced', this.reference.getTemplate());
 
-                this.modal.load('advanced', 'Select Figure:', 400);
+                this.modal.load('advanced', 'Select Reference:', 400);
 
                 this.modal.createCancelButton();
 
