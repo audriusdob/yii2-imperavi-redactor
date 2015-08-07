@@ -72,7 +72,7 @@ if (!RedactorPlugins) var RedactorPlugins = {};
                         var clicked_title = $(this).data('title');
                        // var input_string = '[[m-'+clicked_id+'{'+clicked_title+'}]]';
 
-                        var input_string = '[[r'+clicked_id+']]*';
+                        var input_string = '[[type=r|id='+clicked_id+']]*';
 
                         root.modal.close();
                         root.insert.html(input_string);
