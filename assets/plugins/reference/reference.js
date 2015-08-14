@@ -79,7 +79,6 @@ if (!RedactorPlugins) var RedactorPlugins = {};
 
                     });
 
-
                 }, this));
 
                 $('#mymodal-textarea').focus();
