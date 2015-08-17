@@ -48,10 +48,11 @@ if (!RedactorPlugins) var RedactorPlugins = {};
                 $.getJSON(this.opts.referencesList, $.proxy(function(data)
                 {
 
+                    var items_added = 0;
 
                     $.each(data, $.proxy(function(key, val)
                     {
-
+                        items_added = 1;
                         //console.log(key);
                         // title
                         var thumbtitle = '';
@@ -66,6 +67,11 @@ if (!RedactorPlugins) var RedactorPlugins = {};
 
 
                     }, this));
+
+                    if (items_added == 0){
+                        var info = '<h4>Please add at least one reference to the page.</h4>';
+                        $('#redactor_references_box').append(info);
+                    }
 
                     $('.button-reference').click(function(){
                         var clicked_id = $(this).data('id');

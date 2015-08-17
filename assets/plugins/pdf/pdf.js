@@ -48,10 +48,10 @@ if (!RedactorPlugins) var RedactorPlugins = {};
                 $.getJSON(this.opts.figuresList, $.proxy(function(data)
                 {
 
-
+                    var items_added = 0;
                     $.each(data, $.proxy(function(key, val)
                     {
-
+                        items_added = 1;
                         //console.log(key);
                         // title
                         var thumbtitle = '';
@@ -66,6 +66,11 @@ if (!RedactorPlugins) var RedactorPlugins = {};
 
 
                     }, this));
+
+                    if (items_added == 0){
+                        var info = '<h4>Please add at least one figure to the page.</h4>';
+                        $('#redactor_figures_box').append(info);
+                    }
 
                     $('.button-modal').click(function(){
                         var clicked_id = $(this).data('id');
