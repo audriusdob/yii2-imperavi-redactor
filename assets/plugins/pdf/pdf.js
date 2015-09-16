@@ -59,7 +59,7 @@ if (!RedactorPlugins) var RedactorPlugins = {};
                         if (typeof val.title !== 'undefined') thumbtitle = val.title;
                         if (typeof val.figure_id !== 'undefined') item_id = val.figure_id;
 
-                        var img = $('<div class="redactor-figure-list-item row"><div class="image col-md-4"><img src="' + val.thumb + '" class="img-responsive" title="' + thumbtitle + '" />' + '</div><div class="title col-md-8"><p>' + thumbtitle + '</p></div><div class="button-row col-md-12"> <a href="javascript:void(0)" class="btn btn-default button-figure" data-id="'+ item_id +'">Insert Figure</a> <a href="javascript:void(0)" class="btn btn-default button-modal" data-id="'+ item_id +'" data-title="'+ thumbtitle +'">Insert Modal</a></div></div>');
+                        var img = $('<div class="redactor-figure-list-item row"><div class="image col-md-4"><img src="' + val.thumb + '" class="img-responsive" title="' + thumbtitle + '" />' + '</div><div class="title col-md-8"><p>' + thumbtitle + '</p></div><div class="button-row col-md-12"> <a href="javascript:void(0)" class="btn btn-default button-figure" data-id="' + item_id + '">Figure</a> <a href="javascript:void(0)" class="btn btn-default button-modal" data-id="' + item_id + '" data-title="' + thumbtitle + '">Modal text</a> <a href="javascript:void(0)" class="btn btn-default button-block" data-id="' + item_id + '">Modal Block</a></div></div>');
 
 
                         $('#redactor_figures_box').append(img);
@@ -78,6 +78,15 @@ if (!RedactorPlugins) var RedactorPlugins = {};
                        // var input_string = '[[m-'+clicked_id+'{'+clicked_title+'}]]';
 
                         var input_string = '[[type=m|text='+clicked_title+'|id='+clicked_id+']]*';
+
+                        root.modal.close();
+                        root.insert.html(input_string);
+
+                    });
+
+                    $('.button-block').click(function(){
+                        var clicked_id = $(this).data('id');
+                        var input_string = '[[type=b|id='+clicked_id+']]*';
 
                         root.modal.close();
                         root.insert.html(input_string);
