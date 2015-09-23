@@ -75,7 +75,7 @@ if (!RedactorPlugins) var RedactorPlugins = {};
                     $('.button-modal').click(function(){
                         var clicked_id = $(this).data('id');
                         var clicked_title = $(this).data('title');
-                       // var input_string = '[[m-'+clicked_id+'{'+clicked_title+'}]]';
+                        // var input_string = '[[m-'+clicked_id+'{'+clicked_title+'}]]';
 
                         var input_string = '[[type=m|text='+clicked_title+'|id='+clicked_id+']]*';
 
